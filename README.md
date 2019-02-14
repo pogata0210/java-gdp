@@ -12,6 +12,17 @@ Set up a Rabbit Message Queue to hold logging information
 * Different end points will send messages to the queue
 * Set up a class to consume the logs - this will represent another server that manages logging
 
+## Recommended Steps
+1. Create a new project
+2. Add Jackson Dependencies
+3. Build Queue and Exchange
+4. Populate the rest of the Application class
+5. Write the Message Listener (Consumer)
+6. Write Data class
+7. Write Exception class
+8. Write Repository interface
+9. Write Controller class!
+
 ## Expose the following end points
 
 ### GET
@@ -21,10 +32,11 @@ Set up a Rabbit Message Queue to hold logging information
 
 /total - return the sum of all GDPs using the JSON format with country name being returned as Total
 
-/gpd/{country name} - return using the JSON format the record for that country. Must be spelled as in the data!  
+/gdp/{country name} - return using the JSON format the record for that country. Must be spelled as in the data!  
 Log that someone looked up this country
 
 ### POST
 
-/gpd - loads the data from the provided JSON file
+/gdp - loads the data from the provided JSON file
+
 
